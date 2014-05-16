@@ -11,6 +11,36 @@
 }
 
 .result{
+	font-size: .1em;
+	color:red;	
+}
+.rotate{
 	font-size: 4em;
 	color:red;
+	-webkit-transition-duration: 3s;
+	-webkit-transform: rotate(360deg);
+
+}
+
+.translation{
+-webkit-transform: rotateZ(360deg);
+-webkit-transition-duration: 5s;
+width:100px;
+height:100px;
+background:white;
+position:relative;
+animation:mymove 5s 5s;
+-webkit-animation:mymove 5s 5s; /*Safari and Chrome*/
+}
+
+@keyframes mymove
+{
+from {left:0px;}
+to {left:200px;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+from {left:0px;}
+to {left:200px;}
 }

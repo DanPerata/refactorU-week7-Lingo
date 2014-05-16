@@ -18,9 +18,9 @@ $('#form').on("submit", function(e) {
 		if(data.errorCode === "Validation_EXCEPTION"){
 			console.log('error')
 		}
-		$('.result').text(data.translation)
-
-
+		// var resultFun= $('<p class= "result">');
+		$('.result').text(data.translation).addClass('rotate');
+		// $('.translation').append(.)
 
 	})
 
