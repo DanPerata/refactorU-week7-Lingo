@@ -3,23 +3,23 @@ extends layout
 block content
 	div.container
 		h1 Translator
-		form.form-inline
+		form#form.form-inline
 			div.form-group
-				label(for="LanguageFrom") Language From
-				div.dropdown
+				label.from(for="LanguageFrom") Language From
+				div.from.dropdown
 					button(data-toggle="dropdown" type="button").btn.btn-default.dropdown-toggle Choose Language
 					ul(role="menu" aria-labelledby="dropdownMenu1").dropdown-menu
 						for language in languages
 							li(role="presentation")
-								a(role="menuitem" tabindex="-1" href="#") #{language}
-				label(for="LanguageFrom") Language To
-				div.dropdown
+								a(data-code=language.code role="menuitem" tabindex="-1" href="#") #{language.name}
+				label.to(for="LanguageFrom") Language To
+				div.to.dropdown
 					button(data-toggle="dropdown" type="button").btn.btn-default.dropdown-toggle Choose Language
 					ul(role="menu" aria-labelledby="dropdownMenu1").dropdown-menu
 						for language in languages
 							li(role="presentation")
-								a(role="menuitem" tabindex="-1" href="#") #{language}
-				label(for="LanguageFrom") Word To Translate
-				div.wordContainer
+								a(data-code=language.code role="menuitem" tabindex="-1" href="#") #{language.name}
+				label.wordLabel(for="LanguageFrom") Word To Translate
+				div.word.wordContainer
 					input.word(type="text")
-					input.button(type="submit")												
+					input.button(type="submit")
