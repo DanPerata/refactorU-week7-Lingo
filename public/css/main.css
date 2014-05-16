@@ -7,5 +7,10 @@
 }
 
 .wordLabel{
-	margin-left: 400px;
+	margin-left: 400px
+}
+
+.result{
+	font-size: 4em;
+	color:red;
 }

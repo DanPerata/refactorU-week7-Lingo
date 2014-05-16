@@ -11,15 +11,17 @@ block content
 					ul(role="menu" aria-labelledby="dropdownMenu1").dropdown-menu
 						for language in languages
 							li(role="presentation")
-								a(data-code=language.code role="menuitem" tabindex="-1" href="#") #{language.name}
+								a(data-code=language.code role="menuitem" tabindex="-1") #{language.name}
 				label.to(for="LanguageFrom") Language To
 				div.to.dropdown
 					button(data-toggle="dropdown" type="button").btn.btn-default.dropdown-toggle Choose Language
 					ul(role="menu" aria-labelledby="dropdownMenu1").dropdown-menu
 						for language in languages
 							li(role="presentation")
-								a(data-code=language.code role="menuitem" tabindex="-1" href="#") #{language.name}
+								a(data-code=language.code role="menuitem" tabindex="-1") #{language.name}
 				label.wordLabel(for="LanguageFrom") Word To Translate
 				div.word.wordContainer
 					input.word(type="text")
 					input.button(type="submit")
+				div.translation
+					p.result

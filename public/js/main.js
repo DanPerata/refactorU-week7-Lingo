@@ -11,8 +11,20 @@ $('#form').on("submit", function(e) {
 	e.preventDefault();
 	$.post('/languages', {
 		from: $(".from button").val(),
-		to: $(".to button").val() 
+		to: $(".to button").val(),
+		textEntry: $("input.word").val() 
+	},function(data){
+		console.log(data)
+		if(data.errorCode === "Validation_EXCEPTION"){
+			console.log('error')
+		}
+		$('.result').text(data.translation)
+
+
+
 	})
+
+
 })
 
 })
